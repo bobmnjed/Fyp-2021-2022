@@ -56,10 +56,10 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/">Home</a> </li>
-                                        <li> <a href="/Aboutus">About</a></li>
+                                        <li> <a href="/Aboutus">About us</a></li>
                                         <li><a href="/Phonebrands">Phone Brands</a></li>
                                         <li><a href="/shop">Shop</a></li>
-                                        <li><a href="/Contactus">Contact Us</a></li>
+                                        <li><a href="/Contactus">Contact us</a></li>
                                         <li class="last">
                                             <a href="/Cart"><img src="{{asset('images/cart.png')}}" alt="icon" /></a>
                                         </li>
