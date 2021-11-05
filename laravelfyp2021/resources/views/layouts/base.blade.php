@@ -70,15 +70,28 @@
                     </div>
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
-                            <ul style="height: 65px">
-                                <li><a href="#"; style="color:white;">Login</a></li>
-                                <li><a href="#"; style="color:white;">Registor</a></li>  
+                            <ul style="height: 65px">  
                                 <li class="last">
                                     <form class="form-inline my-2 my-lg-0">
                                         <input class="form-control mr-sm-2" type="text" placeholder="Search..."; style="height: 15px">
                                         <a href="#"; style="margin-bottom: 35px"><img src="{{asset('images/search_icon.png')}}" alt="icon" /></a>
                                     </form>
                                 </li> 
+
+                                @if(Route::has('login'))
+                                  @auth
+                                    @if(Auth::user()->utype=== 'ADM')
+                                         <li><a title="My Account" href="#"; style="color:white;">My Account ({{Auth::user()->name}})</a></li>
+                                         <li><a title="Dashboard" href="#"; style="color:white;">Dashboard</a></li> 
+                                    @else    
+                                         <li><a title="My Account" href="#"; style="color:white;">My Account ({{Auth::user()->name}})</a></li>
+                                         <li><a title="Dashboard" href="#"; style="color:white;">Dashboard</a></li> 
+                                    @endif    
+                                  @else
+                                    <li><a href="{{route('login')}}"; style="color:white;">Login</a></li>
+                                    <li><a href="{{route('register')}}"; style="color:white;">Register</a></li>  
+                                  @endif 
+                                @endif
                             </ul>
                         </div>
                     </div>

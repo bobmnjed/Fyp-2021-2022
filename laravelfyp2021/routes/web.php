@@ -34,3 +34,9 @@ Route::get('/Contactus',ContactusComponent::class);
 Route::get('/Phonebrands',PhonebrandsComponent::class);
 
 Route::get('/Cart',CartComponent::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+
