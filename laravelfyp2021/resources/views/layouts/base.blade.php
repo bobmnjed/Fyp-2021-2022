@@ -75,23 +75,47 @@
                                     <form class="form-inline my-2 my-lg-0">
                                         <input class="form-control mr-sm-2" type="text" placeholder="Search..."; style="height: 15px">
                                         <a href="#"; style="margin-bottom: 35px"><img src="{{asset('images/search_icon.png')}}" alt="icon" /></a>
-                                    </form>
-                                </li> 
-
-                                @if(Route::has('login'))
+                                    
+                                    @if(Route::has('login'))
                                   @auth
                                     @if(Auth::user()->utype=== 'ADM')
-                                         <li><a title="My Account" href="#"; style="color:white;">My Account ({{Auth::user()->name}})</a></li>
-                                         <li><a title="Dashboard" href="#"; style="color:white;">Dashboard</a></li> 
-                                    @else    
-                                         <li><a title="My Account" href="#"; style="color:white;">My Account ({{Auth::user()->name}})</a></li>
-                                         <li><a title="Dashboard" href="#"; style="color:white;">Dashboard</a></li> 
+                                    <div class="dropdown" style="margin-bottom: 40px">
+                                        <button style="color:black" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          My Account
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
+                                          <a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard</a> 
+                                          <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                          <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                            @csrf
+                                          </form>
+                                        </div>
+                                      </div>
+                                    @else   
+                                    <div class="dropdown" style="margin-bottom: 40px" > 
+                                    <button style="color:black"class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        My Account
+                                      </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
+                                        <a class="dropdown-item" href="{{route('user.dashboard')}}">Dashboard</a>
+                                        <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                        <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                          @csrf
+                                        </form>                                 
+                                     </div>
+                                    </div>
                                     @endif    
                                   @else
                                     <li><a href="{{route('login')}}"; style="color:white;">Login</a></li>
                                     <li><a href="{{route('register')}}"; style="color:white;">Register</a></li>  
                                   @endif 
                                 @endif
+                            </form>
+                                </li> 
+
+                                
                             </ul>
                         </div>
                     </div>

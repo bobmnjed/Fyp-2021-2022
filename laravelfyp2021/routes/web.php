@@ -4,6 +4,8 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\AboutusComponent;
 use App\Http\Livewire\ContactusComponent;
 use App\Http\Livewire\PhonebrandsComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -35,8 +37,19 @@ Route::get('/Phonebrands',PhonebrandsComponent::class);
 
 Route::get('/Cart',CartComponent::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
+
+//For User or Costumer 
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+        Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+});
+
+//For Admin
+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
+        Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+});
+
 
 
