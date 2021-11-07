@@ -60,9 +60,12 @@
                                         <li><a href="/Phonebrands">Phone Brands</a></li>
                                         <li><a href="/shop">Shop</a></li>
                                         <li><a href="/Contactus">Contact us</a></li>
+
+
                                         <li class="last">
                                             <a href="/Cart"><img src="{{asset('images/cart.png')}}" alt="icon" /></a>
                                         </li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
@@ -72,7 +75,7 @@
                         <div class="location_icon_bottum">
                             <ul style="height: 65px">  
                                 <li class="last">
-                                    <form class="form-inline my-2 my-lg-0">
+                                    <form class="form-inline my-2 my-lg-0" id="logout-form" method="POST" action="{{route('logout')}}">
                                         <input class="form-control mr-sm-2" type="text" placeholder="Search..."; style="height: 15px">
                                         <a href="#"; style="margin-bottom: 35px"><img src="{{asset('images/search_icon.png')}}" alt="icon" /></a>
                                     
@@ -87,9 +90,7 @@
                                           <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
                                           <a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard</a> 
                                           <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                          <form id="logout-form" method="POST" action="{{route('logout')}}">
                                             @csrf
-                                          </form>
                                         </div>
                                       </div>
                                     @else   
@@ -101,18 +102,16 @@
                                         <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
                                         <a class="dropdown-item" href="{{route('user.dashboard')}}">Dashboard</a>
                                         <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                        <form id="logout-form" method="POST" action="{{route('logout')}}">
-                                          @csrf
-                                        </form>                                 
+                                          @csrf                        
                                      </div>
                                     </div>
-                                    @endif    
+                                    @endif
                                   @else
                                     <li><a href="{{route('login')}}"; style="color:white;">Login</a></li>
                                     <li><a href="{{route('register')}}"; style="color:white;">Register</a></li>  
                                   @endif 
-                                @endif
-                            </form>
+                                  @endif
+                                  </form>
                                 </li> 
 
                                 
