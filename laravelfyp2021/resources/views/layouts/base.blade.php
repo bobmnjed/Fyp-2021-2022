@@ -71,6 +71,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul style="height: 65px">  
@@ -107,8 +108,10 @@
                                     </div>
                                     @endif
                                   @else
+                                  <div>
                                     <li><a href="{{route('login')}}"; style="color:white;">Login</a></li>
-                                    <li><a href="{{route('register')}}"; style="color:white;">Register</a></li>  
+                                    <li><a href="{{route('register')}}"; style="color:white;">Register</a></li> 
+                                  </div> 
                                   @endif 
                                   @endif
                                   </form>
