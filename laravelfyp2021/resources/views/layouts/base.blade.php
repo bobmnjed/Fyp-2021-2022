@@ -39,7 +39,7 @@
     @livewireStyles
 
 
-{{-- <!-- mobile menu -->
+     <!-- mobile menu -->
 <div class="mercado-clone-wrap">
     <div class="mercado-panels-actions-wrap">
         <a class="mercado-close-btn mercado-close-panels" href="#">x</a>
@@ -57,7 +57,7 @@
                     <div class="topbar-menu left-menu">
                         <ul>
                             <li class="menu-item" >
-                                <a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                                <a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: +961/81895453</a>
                             </li>
                         </ul>
                     </div>
@@ -65,15 +65,8 @@
                         <ul>
                             <li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
                             <li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
-                            <li class="menu-item lang-menu menu-item-has-children parent">
-                                <a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu lang" >
-                                    <li class="menu-item" ><a title="hungary" href="#"><span class="img label-before"><img src="assets/images/lang-hun.png" alt="lang-hun"></span>Hungary</a></li>
-                                    <li class="menu-item" ><a title="german" href="#"><span class="img label-before"><img src="assets/images/lang-ger.png" alt="lang-ger" ></span>German</a></li>
-                                    <li class="menu-item" ><a title="french" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fre"></span>French</a></li>
-                                    <li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
-                                </ul>
-                            </li>
+                            <li class="menu-item" ><a title="ChatBot" href="register.html">Chatbot</a></li>
+
                             <li class="menu-item menu-item-has-children parent" >
                                 <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu curency" >
@@ -97,7 +90,7 @@
                 <div class="mid-section main-info-area">
 
                     <div class="wrap-logo-top left-section">
-                        <a href="index.html" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
+                        <a href="index.html" class="link-to-home"><img src="{{asset('images/Logo2.PNG')}}" alt="mercado"></a>
                     </div>
 
                     <div class="wrap-search center-section">
@@ -167,21 +160,29 @@
 
                 <div class="primary-nav-section">
                     <div class="container">
-                        <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
+                        <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu">
                             <li class="menu-item home-icon">
-                                <a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                <a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
                             </li>
+
                             <li class="menu-item">
-                                <a href="about-us.html" class="link-term mercado-item-title">About Us</a>
+                                <a href="/Aboutus" class="link-term mercado-item-title">About Us</a>
                             </li>
+
                             <li class="menu-item">
-                                <a href="shop.html" class="link-term mercado-item-title">Shop</a>
+                                <a href="/shop" class="link-term mercado-item-title">Shop</a>
                             </li>
+
                             <li class="menu-item">
-                                <a href="cart.html" class="link-term mercado-item-title">Cart</a>
+                                <a href="/Phonebrands" class="link-term mercado-item-title">Phone Brands</a>
                             </li>
+
                             <li class="menu-item">
-                                <a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
+                                <a href="/Cart" class="link-term mercado-item-title">Cart</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="/Aboutus" class="link-term mercado-item-title">Contact Us</a>
                             </li>								
                         </ul>
                     </div>
@@ -189,17 +190,17 @@
             </div>
         </div>
     </div>
-</header> --}}
+</header>
 
 
-</head>
+{{-- </head>
 <!-- body -->
 
 <body class="main-layout ">
     <!-- header -->
-    <header>
+    <header >
         <!-- header inner -->
-        <div class="header" style="color: white">
+        <div class="header">
 
             <div class="container">
                 <div class="row">
@@ -213,7 +214,7 @@
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <div class="menu-area">
+                        <div class="menu-area" >
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
@@ -221,7 +222,7 @@
                                         <li> <a href="/Aboutus">About us</a></li>
                                         <li><a href="/Phonebrands">Phone Brands</a></li>
                                         <li><a href="/shop">Shop</a></li>
-                                        <li><a href="/Contactus">Contact us</a></li>
+                                        <li><a href="/Aboutus">Contact us</a></li>
 
 
                                         <li class="last">
@@ -287,7 +288,7 @@
                             </ul>
                         </div>
                     </div>
-                 </div> 
+                 </div>  --}}
            {{$slot}}        
 
     <!-- footer -->
@@ -339,6 +340,16 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.0.0.min.js')}}"></script>
     <script src="{{ asset('js/plugin.js')}}"></script>
+
+    <script src="{{ asset('cartjs/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+	<script src="{{ asset('cartjs/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+	<script src="{{ asset('cartjs/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('cartjs/jquery.flexslider.js')}}"></script>
+	<script src="{{ asset('cartjs/chosen.jquery.min.js')}}"></script>
+	<script src="{{ asset('cartjs/owl.carousel.min.js')}}"></script>
+	<script src="{{ asset('cartjs/jquery.countdown.min.js')}}"></script>
+	<script src="{{ asset('cartjs/jquery.sticky.js')}}"></script>
+	<script src="{{ asset('cartjs/functions.js')}}"></script>
     <!-- sidebar -->
     <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{ asset('js/custom.js')}}"></script>

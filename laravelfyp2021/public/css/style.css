@@ -437,8 +437,8 @@ a.readmore_bt {
 
 .header {
      font-family: poppins;
-     padding: 10px 0px;
-     background: url(../images/hea.png);
+    
+   
      background-repeat: no-repeat;
 background-size: 100% 100%;
 background-position: center center;
@@ -1644,7 +1644,7 @@ border-radius: 30px;
 
 .banner-main .carousel-caption .buynow:hover {
      border: #ff0000 solid 1px;
-     background: #ff0000;
+     background: white;
      color: #fff;
 }
 

@@ -1,0 +1,70 @@
+.cart-page{
+    margin: 90px auto;
+   
+}
+
+table{
+    width: 100%;
+   
+    border-collapse:collapse;
+}
+
+.cart-info{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align:left;
+    padding: 7px;
+    color:white;
+    background:red;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+    text-align: left;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;  
+    resize: vertical;
+}
+
+td a{
+    color:red;
+    font-size: 12px;
+}
+
+td img{
+    width: 75px;
+    height: 110px;
+    margin-right: 10px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+    color: white; /* la2ana white ma mbynin ele aal shmel */
+}
+
+.total-price table{
+    border-top: 3px solid rgb(65, 63, 63);
+    width: 100%;
+    max-width: 350% ;
+   
+}
+
+td:last-child{
+    text-align: right;
+    color: white;
+}
+
+th:last-child{
+    text-align: right;
+}
