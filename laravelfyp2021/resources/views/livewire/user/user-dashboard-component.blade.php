@@ -1,5 +1,4 @@
-</header>
-<!-- end header -->
+
 
 <div>
     <h1>User Dashboard</h1>

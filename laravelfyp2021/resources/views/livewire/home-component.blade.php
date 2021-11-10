@@ -111,7 +111,7 @@
 <div class="row">
 <div class="col-md-12">
 <div class="titlepage">
-    <h2>Our Brand</h2>
+    <h2>New Products</h2>
 </div>
 </div>
 </div>
@@ -119,74 +119,25 @@
 <div class="brand-bg">
 <div class="container">
 <div class="row">
+
+    @foreach ($products as $product )
+        
+    
 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
     <div class="brand_box">
-        <img src="{{asset ('images/1.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
+        <img src="{{asset ('images')}}/{{$product->image}}" alt="{{$product->name}}" />
+        <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
+        <span>{{$product->name}}</span>
         <i><img src="{{asset ('images/star.png')}}"/></i>
         <i><img src="{{asset ('images/star.png')}}"/></i>
         <i><img src="{{asset ('images/star.png')}}"/></i>
         <i><img src="{{asset ('images/star.png')}}"/></i>
     </div>
 </div>
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-    <div class="brand_box">
-        <img src="{{asset ('images/2.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-    <div class="brand_box">
-        <img src="{{asset ('images/3.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-    <div class="brand_box">
-        <img src="{{asset ('images/4.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-    <div class="brand_box">
-        <img src="{{asset ('images/5.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-    <div class="brand_box">
-        <img src="{{asset ('images/6.png')}}" alt="img" />
-        <h3>$<strong class="red">100</strong></h3>
-        <span>Mobile Phone</span>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-        <i><img src="{{asset ('images/star.png')}}"/></i>
-    </div>
-</div>
+@endforeach
+
 <div class="col-md-12">
-    <a href="/Phonebrands" class="read-more">See More</a>
+    <a href="/shop" class="read-more">See More</a>
 </div>
 </div>
 </div>

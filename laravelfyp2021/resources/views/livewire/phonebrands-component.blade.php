@@ -1,5 +1,4 @@
-</header>
-<!-- end header -->
+
 <div class="brand_color">
     <div class="container">
         <div class="row">

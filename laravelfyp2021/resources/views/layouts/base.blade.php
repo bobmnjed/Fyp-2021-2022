@@ -63,24 +63,61 @@
                     </div>
                     <div class="topbar-menu right-menu">
                         <ul>
-                            <li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-                            <li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
+            
                             <li class="menu-item" ><a title="ChatBot" href="register.html">Chatbot</a></li>
 
                             <li class="menu-item menu-item-has-children parent" >
                                 <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu curency" >
                                     <li class="menu-item" >
-                                        <a title="Pound (GBP)" href="#">Pound (GBP)</a>
+                                        <a title="Pound (GBP)" href="#" style="color:black">Pound (GBP)</a>
                                     </li>
                                     <li class="menu-item" >
-                                        <a title="Euro (EUR)" href="#">Euro (EUR)</a>
+                                        <a title="Euro (EUR)" href="#"  style="color:black">Euro (EUR)</a>
                                     </li>
                                     <li class="menu-item" >
-                                        <a title="Dollar (USD)" href="#">Dollar (USD)</a>
+                                        <a title="Dollar (USD)" href="#"  style="color:black">Dollar (USD)</a>
                                     </li>
                                 </ul>
                             </li>
+                             @if(Route::has('login'))
+                                @auth
+                                  @if(Auth::user()->utype === 'ADM')
+                                        <li class="menu-item menu-item-has-children parent" >
+                                            <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="submenu curency" >
+                                                <li class="menu-item" >
+                                                    <a title="Dashboard" href="{{route('admin.dashboard')}}" style="color:black">Dashboard</a>
+                                                </li> 
+                                                <li>
+                                                    <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
+                                                </li>
+                                                <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                                    @csrf
+                                               </form>
+                                            </ul>
+                                        </li>
+                                  @else 
+                                  <li class="menu-item menu-item-has-children parent" >
+                                    <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="submenu curency" >
+                                        <li class="menu-item" >
+                                            <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
+                                        </li> 
+                                        <li>
+                                            <a style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
+                                        </li>
+                                        <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                            @csrf
+                                       </form>
+                                    </ul>
+                                </li>
+                                    @endif    
+                                @else
+                                 <li class="menu-item" ><a title="Register or Login" href="{{route('login')}}">Login</a></li>
+                                 <li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+                                @endif
+                            @endif   
                         </ul>
                     </div>
                 </div>
@@ -90,7 +127,7 @@
                 <div class="mid-section main-info-area">
 
                     <div class="wrap-logo-top left-section">
-                        <a href="index.html" class="link-to-home"><img src="{{asset('images/Logo2.PNG')}}" alt="mercado"></a>
+                        <a href="/" class="link-to-home"><img src="{{asset('images/Logo2.PNG')}}" alt="mercado"></a>
                     </div>
 
                     <div class="wrap-search center-section">
@@ -182,8 +219,9 @@
                             </li>
 
                             <li class="menu-item">
-                                <a href="/Aboutus" class="link-term mercado-item-title">Contact Us</a>
-                            </li>								
+                                <a href="/Contactus" class="link-term mercado-item-title">Contact Us</a>
+                            </li>
+                           					
                         </ul>
                     </div>
                 </div>
@@ -191,105 +229,7 @@
         </div>
     </div>
 </header>
-
-
-{{-- </head>
-<!-- body -->
-
-<body class="main-layout ">
-    <!-- header -->
-    <header >
-        <!-- header inner -->
-        <div class="header">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                            <div class="center-desk">
-                                <div class="logo"; style="padding-right: 20px">
-                                    <a href="/"><img src="{{asset('images/Logo2.PNG')}}" alt="#"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <div class="menu-area" >
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        <li class="active"> <a href="/">Home</a> </li>
-                                        <li> <a href="/Aboutus">About us</a></li>
-                                        <li><a href="/Phonebrands">Phone Brands</a></li>
-                                        <li><a href="/shop">Shop</a></li>
-                                        <li><a href="/Aboutus">Contact us</a></li>
-
-
-                                        <li class="last">
-                                            <a href="/Cart"><img src="{{asset('images/cart.png')}}" alt="icon" /></a>
-                                        </li>
-                                        
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 offset-md-6">
-                        <div class="location_icon_bottum">
-                            <ul style="height: 70px">  
-                                <li class="last">
-                                    <form class="form-inline my-2 my-lg-0" id="logout-form" method="POST" action="{{route('logout')}}">
-                                        <input class="form-control mr-sm-2" type="text" placeholder="Search..."; style="height: 35px">
-                                        <a href="#"; style="margin-bottom: 35px"><img src="{{asset('images/search_icon.png')}}" alt="icon" /></a>
-                                    
-                                    @if(Route::has('login'))
-                                  @auth
-                                    @if(Auth::user()->utype=== 'ADM')
-                                    <div class="dropdown" style="margin-bottom: 40px">
-                                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          My Account
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
-                                          <a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard</a> 
-                                          <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                            @csrf
-                                        </div>
-                                      </div>
-                                    @else   
-                                    <div class="dropdown" style="margin-bottom: 40px" > 
-                                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        My Account
-                                      </button>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">{{Auth::user()->name}}</a>
-                                        <a class="dropdown-item" href="{{route('user.dashboard')}}">Dashboard</a>
-                                        <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                          @csrf                        
-                                     </div>
-                                    </div>
-                                    @endif
-                                  @else
-                                  <div>
-                                  
-                                    
-                                    <button type="button" class="btn btn-dark" style="margin-bottom: 0cm"><a href="{{route('login')}}"; style="color:white;">Login</a></button>
-                                    <button type="button" class="btn btn-dark" style="margin-bottom: 0cm"><a href="{{route('register')}}"; style="color:white;">Register</a></button>
-                                    
-                                    
-                                  </div> 
-                                  @endif 
-                                  @endif
-                                  </form>
-                                </li> 
-
-                                
-                            </ul>
-                        </div>
-                    </div>
-                 </div>  --}}
-           {{$slot}}        
+{{$slot}}        
 
     <!-- footer -->
     <footer>
