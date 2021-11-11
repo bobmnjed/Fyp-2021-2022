@@ -33,6 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/owl.carousel.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Auth/flexslider.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/chosen.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('Auth/color-01.css')}}">
