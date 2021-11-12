@@ -1480,7 +1480,7 @@ a.slide_banner:hover::before {
      opacity: 1;
 }
 .flex-control-nav {
-     background: #38c8a8;
+     background: white;
      bottom: 0px;
      position: relative;
 }
