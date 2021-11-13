@@ -17,7 +17,7 @@ class PhonebrandsComponent extends Component
     
     public function render()
     {
-        $products = Product::paginate(50);
+        $products = Product::paginate(12);
         return view('livewire.phonebrands-component',['products'=> $products])->layout('layouts.base');
     }
 }
