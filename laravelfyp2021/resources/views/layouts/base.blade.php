@@ -289,7 +289,7 @@
 	<script src="{{ asset('cartjs/bootstrap.min.js')}}"></script>
 	<script src="{{ asset('cartjs/jquery.flexslider.js')}}"></script>
 	<script src="{{ asset('cartjs/chosen.jquery.min.js')}}"></script>
-	{{-- <script src="{{ asset('cartjs/owl.carousel.min.js')}}"></script> --}}
+    <script src="{{ asset('cartjs/owl.carousel.min.js')}}"></script> 
 	<script src="{{ asset('cartjs/jquery.countdown.min.js')}}"></script>
 	<script src="{{ asset('cartjs/jquery.sticky.js')}}"></script>
 	<script src="{{ asset('cartjs/functions.js')}}"></script>
