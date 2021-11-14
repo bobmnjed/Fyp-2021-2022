@@ -2,7 +2,7 @@
 
 
 <main id="main" class="main-site">
-    
+
  <div class="brand_color">
     <div class="container">
         <div class="row">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div> 
     <div class="container">
 
         <div class="wrap-breadcrumb">
@@ -60,7 +60,7 @@
                    												
                 </ul>
                 @else 
-                    <p>NO ITEM ADDED TO CART</p>
+                    <p style="color: red">NO ITEM ADDED TO CART</p>
                 @endif
             </div>
 
