@@ -1,6 +1,6 @@
 
 
-
+<main>
 
     <div class="wrap-shop-control">
 
