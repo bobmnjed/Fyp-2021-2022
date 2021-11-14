@@ -36,7 +36,6 @@
                     <option value="21">21 per page</option>
                     <option value="24">24 per page</option>
                     <option value="30">30 per page</option>
-                    <option value="32">32 per page</option>
                 </select>
             </div>
 
@@ -50,8 +49,6 @@
         <div class="container">
             <div class="row">
                 @foreach ($products as $product )
-        
-    
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
@@ -66,8 +63,6 @@
                 </div>
                 @endforeach
                 </div>
-                 
-              
             </div>
         </div>
     </div>
