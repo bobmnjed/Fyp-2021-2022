@@ -6,17 +6,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Shop</h2>
+                        <h2>Product Categories</h2>
+                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div> 
-    
+
     <div class="wrap-shop-control">
 
-        <h1 class="shop-title">Digital & Electronics</h1>
+        <h1 class="shop-title">Categories</h1>
         <div class="wrap-right">
+
             <div class="sort-item orderby ">
                 <select name="orderby" class="use-chosen" wire:model="sorting">
                     <option value="default" selected="selected">Default sorting</option>
@@ -43,6 +46,7 @@
             </div>
 
         </div>
+        @if($products->count()>0)
     <div class="brand-bg">
         <div class="container">
             <div class="row">
@@ -63,6 +67,9 @@
                 </div>
             </div>
         </div>
+        @else 
+        <p style="padding-top: 30px;">No Products</p>
+        @endif
     </div>
 </main>
 <!-- end brand -->
