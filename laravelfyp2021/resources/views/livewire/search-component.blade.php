@@ -1,6 +1,7 @@
 
 
 <main id="main" class="main-site">
+    
     <div class="brand_color">
         <div class="container">
             <div class="row">
@@ -17,7 +18,7 @@
 
     <div class="wrap-shop-control">
 
-        <h1 class="shop-title">Categories</h1>
+        <h1 class="shop-title">Result</h1>
         <div class="wrap-right">
 
             <div class="sort-item orderby ">
@@ -65,6 +66,7 @@
                 </div>
                 @endforeach
                 </div>
+                <div style="padding-left:500px"> {{$products->links()}}</div>
             </div>
         </div>
         @else 

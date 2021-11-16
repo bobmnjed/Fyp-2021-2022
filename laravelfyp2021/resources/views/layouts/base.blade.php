@@ -65,7 +65,7 @@
                     <div class="topbar-menu right-menu">
                         <ul>
             
-                            <li class="menu-item" ><a title="ChatBot" href="register.html">Chatbot</a></li>
+                            <li class="menu-item" ><a title="ChatBot" href="#">Chatbot</a></li>
 
                             <li class="menu-item menu-item-has-children parent" >
                                 <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -92,6 +92,9 @@
                                                 </li> 
                                                 <li class="menu-item">
                                                     <a title="Categories" href="{{ route('admin.categories')}}" style="color:black">Categories</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="Products" href="{{ route('admin.products')}}" style="color:black">Products</a>
                                                 </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>

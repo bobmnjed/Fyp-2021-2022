@@ -7,7 +7,7 @@
                 <div class="col-md-12">
                     <div class="titlepage">
                         <h2>Product Categories</h2>
-                        <h2>{{$Category_name}}</h2>
+                        
 
                     </div>
                 </div>
@@ -17,7 +17,7 @@
 
     <div class="wrap-shop-control">
 
-        <h1 class="shop-title">{{$Category_name}}</h1>
+        <h1 class="shop-title">{{$category_name}}</h1>
         <div class="wrap-right">
 
             <div class="sort-item orderby ">

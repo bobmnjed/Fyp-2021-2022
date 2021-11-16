@@ -1,7 +1,7 @@
 <div>
     <style>
         nav svg{
-            height: 10px;
+            height: 20px;
         }
         nav .hidden{
             display: block !important;

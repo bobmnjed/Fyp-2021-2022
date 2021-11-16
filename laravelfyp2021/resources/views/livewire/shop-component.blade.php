@@ -15,7 +15,7 @@
     
     <div class="wrap-shop-control">
 
-        <h1 class="shop-title">Digital & Electronics</h1>
+        <h1 class="shop-title">Shop Products</h1>
         <div class="wrap-right">
             <div class="sort-item orderby ">
                 <select name="orderby" class="use-chosen" wire:model="sorting">
@@ -45,6 +45,16 @@
         </div>
     <div class="brand-bg">
         <div class="container">
+            <div class="dropdown" style="margin-bottom: 30px">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: red">
+                  Product Categories
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach ($categories as $category)
+                  <a class="dropdown-item" href="{{route('product.categories',['category_slug'=>$category->slug])}}">{{$category->name}}</a>
+                @endforeach 
+                </div>
+              </div>
             <div class="row">
                 @foreach ($products as $product )
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -61,7 +71,7 @@
                 </div>
                 @endforeach
                 </div>
-                {{$products->links()}}
+               <div style="padding-left:500px"> {{$products->links()}}</div>
             </div>
         </div>
     </div>
