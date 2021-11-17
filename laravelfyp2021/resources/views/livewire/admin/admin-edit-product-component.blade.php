@@ -17,7 +17,7 @@
                         @if (Session::has('message'))
                             <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
                         @endif
-                        <form class="from-horizontal" enctype="multipart/form-data" wire:submit.prevent="addProduct">
+                        <form class="from-horizontal" enctype="multipart/form-data" wire:submit.prevent="updateProduct">
                             <div class="form-group">
                                 <label class="col-md-12 control-label">Product Name</label>
                                 <div class="col-md-12">
@@ -97,9 +97,11 @@
                             <div class="form-group">
                                 <label class="col-md-12 control-label">Product Image</label>
                                 <div class="col-md-12">
-                                    <input type="file"  class="input-file" wire:model="image"/>
-                                    @if ($image)
-                                    <img src = "{{ $image->temporaryUrl() }}" width = "120"/>
+                                    <input type="file"  class="input-file" wire:model="newimage"/>
+                                    @if ($newimage)
+                                    <img src = "{{ $newimage->temporaryUrl()}}" width = "120"/>
+                                    @else
+                                    <img src="{{asset('images')}}/{{$image}}" width="120" />
                                     @endif
                                 </div>
                             </div>
@@ -127,7 +129,6 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

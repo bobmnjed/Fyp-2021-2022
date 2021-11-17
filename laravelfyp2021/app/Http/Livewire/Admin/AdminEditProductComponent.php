@@ -49,9 +49,42 @@ class AdminEditProductComponent extends Component
 
     }
 
+    public function generateSlug()
+    {
+        $this->slug = Str::slug($this->name,'-');
+    }
+
+    public function updateProduct()
+    {
+        $product = Product::find($this->product_id);
+
+        
+        $product->name = $this->name;
+        $product->slug = $this->slug;
+        $product->short_description = $this->short_description;
+        $product->description = $this->description;
+        $product->regular_price = $this->regular_price;
+        $product->sale_price = $this->sale_price;
+        $product->SKU = $this->SKU;
+        $product->stock_status = $this->stock_status;
+        $product->featured = $this->featured;
+        $product->quantity = $this->quantity;
+        if($this->newimage)
+        {
+            $imageName = Carbon::now()->timestamp. '.' .$this->newimage->extension();
+            $this->newimage->storeAs('products',$imageName);
+            $product->image = $imageName;
+        }
+        
+        $product->category_id = $this->category_id;
+        $product->save();
+        session()->flash('message','Product Updated Successfully!');
+    }
+
 
     public function render()
     {
-        return view('livewire.admin.admin-edit-product-component')->layout('layouts.base');
+        $categories= Category::all();
+        return view('livewire.admin.admin-edit-product-component',['categories'=>$categories])->layout('layouts.base');
     }
 }
