@@ -22,7 +22,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-                        <figure><img src="{{asset ('images/phones/iphone')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
+                        <figure><img src="{{asset ('images')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
                         <i><img src="{{asset ('images/star.png')}}"/></i>
@@ -64,7 +64,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-                        <figure><img src="{{asset ('images/phones/samsung')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
+                        <figure><img src="{{asset ('images')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
                         <i><img src="{{asset ('images/star.png')}}"/></i>
@@ -107,7 +107,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-                        <figure><img src="{{asset ('images/phones/huawei')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
+                        <figure><img src="{{asset ('images')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
                         <i><img src="{{asset ('images/star.png')}}"/></i>

@@ -189,9 +189,7 @@
                                 <a href="/shop" class="link-term mercado-item-title">Shop</a>
                             </li>
 
-                            <li class="menu-item">
-                                <a href="/Phonebrands" class="link-term mercado-item-title">Phone Brands</a>
-                            </li>
+                          
 
                             <li class="menu-item">
                                 <a href="/Cart" class="link-term mercado-item-title">Cart</a>
@@ -233,8 +231,6 @@
                                 <ul class="link">
                                     <li> <a href="#">Home</a></li>
                                     <li> <a href="#">About</a></li>
-                                    
-                                    <li> <a href="#">Phone Brands </a></li>
                                     <li> <a href="#">Shop  </a></li>
                                     <li> <a href="#"> Contact us</a></li>
                                     <li><a href="#">Login</a></li>

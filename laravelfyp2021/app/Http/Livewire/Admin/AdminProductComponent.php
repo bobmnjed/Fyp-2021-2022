@@ -6,7 +6,7 @@ use Livewire\Component;
 use\Livewire\WithPagination;
 use\App\Models\Product;
 use App\Models\Category;
-
+use Carbon\Carbon;
 class AdminProductComponent extends Component
 {
     use WithPagination;

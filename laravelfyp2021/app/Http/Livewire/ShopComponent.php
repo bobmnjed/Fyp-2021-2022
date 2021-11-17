@@ -7,6 +7,7 @@ use\Livewire\WithPagination;
 use\App\Models\Product;
 use\App\Models\Category;
 use Cart;
+use Carbon\Carbon;
 
 class ShopComponent extends Component
 {
