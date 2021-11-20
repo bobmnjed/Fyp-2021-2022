@@ -16,8 +16,8 @@
                         <div class="product-gallery">
                           <ul class="slides">
 
-                            <li data-thumb="{{ asset('images')}}/{{$product->image}}">
-                                <img src="{{asset('images')}}/{{$product->image}}" alt="{{$product->name}}" />
+                            <li data-thumb="{{ asset('images/products')}}/{{$product->image}}">
+                                <img src="{{asset('images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
                             </li>
 
                     
@@ -220,7 +220,7 @@
                                 <div class="product product-widget-style">
                                     <div class="thumbnnail">
                                         <a href="{{route('product.details',['slug'=>$p_product->slug])}}" title="{{$p_product->name}}">
-                                            <figure><img src="{{asset('images')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></figure>
+                                            <figure><img src="{{asset('images/products')}}/{{$p_product->image}}" alt="{{$p_product->name}}"></figure>
                                         </a>
                                     </div>
                                     <div class="product-info">
@@ -247,7 +247,7 @@
                             <div class="product product-style-2 equal-elem ">
                                 <div class="product-thumnail">
                                     <a href="{{route('product.details',['slug'=>$r_product->slug])}}" title="{{$r_product->name}}">
-                                        <figure><img src="{{asset('images')}}/{{$r_product->image}}" width="214" height="214" alt="{{$r_product->name}}"></figure>
+                                        <figure><img src="{{asset('images/products')}}/{{$r_product->image}}" width="214" height="214" alt="{{$r_product->name}}"></figure>
                                     </a>
                                     <div class="group-flash">
                                         <span class="flash-item new-label">new</span>

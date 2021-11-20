@@ -155,6 +155,8 @@
                                 <div class="left-info">
                                     @if (Cart::count()>0)
                                     <span class="index">{{Cart::count()}} items</span>
+                                    @else 
+                                    <span class="index">0 items</span>
                                      @endif
                                     <span class="title">CART</span>
                                 </div>
@@ -189,10 +191,12 @@
                                 <a href="/shop" class="link-term mercado-item-title">Shop</a>
                             </li>
 
-                          
-
                             <li class="menu-item">
                                 <a href="/Cart" class="link-term mercado-item-title">Cart</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="/checkout" class="link-term mercado-item-title">Checkout</a>
                             </li>
 
                             <li class="menu-item">

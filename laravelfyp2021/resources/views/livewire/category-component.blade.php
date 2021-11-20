@@ -46,6 +46,18 @@
             </div>
 
         </div>
+        <div class="brand-bg">
+            <div class="container">
+                <div class="dropdown" style="margin-bottom: 30px">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: red">
+                      Product Categories
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    @foreach ($categories as $category)
+                      <a class="dropdown-item" href="{{route('product.categories',['category_slug'=>$category->slug])}}">{{$category->name}}</a>
+                    @endforeach 
+                    </div>
+                  </div>
     <div class="brand-bg">
         <div class="container">
             <div class="row">
@@ -53,7 +65,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-                        <figure><img src="{{asset ('images')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
+                        <figure><img src="{{asset ('images/products')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
                         <i><img src="{{asset ('images/star.png')}}"/></i>

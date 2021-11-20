@@ -3,8 +3,10 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\AboutusComponent;
 use App\Http\Livewire\ContactusComponent;
+use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\PhonebrandsComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
+
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
@@ -44,6 +46,8 @@ Route::get('/Aboutus',AboutusComponent::class);
 Route::get('/Contactus',ContactusComponent::class);
 
 Route::get('/Phonebrands',PhonebrandsComponent::class);
+
+Route::get('/checkout',CheckoutComponent::class);
 
 Route::get('/Cart',CartComponent::class)->name('product.cart');
 
