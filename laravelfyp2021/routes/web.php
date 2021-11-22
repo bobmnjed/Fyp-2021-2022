@@ -47,7 +47,7 @@ Route::get('/Contactus',ContactusComponent::class);
 
 Route::get('/Phonebrands',PhonebrandsComponent::class);
 
-Route::get('/checkout',CheckoutComponent::class);
+Route::get('/checkout',CheckoutComponent::class)->name('checkout');
 
 Route::get('/Cart',CartComponent::class)->name('product.cart');
 
