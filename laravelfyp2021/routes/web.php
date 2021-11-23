@@ -5,6 +5,8 @@ use App\Http\Livewire\AboutusComponent;
 use App\Http\Livewire\ContactusComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\PhonebrandsComponent;
+use App\Http\Livewire\ThankyouComponent;
+
 use App\Http\Livewire\User\UserDashboardComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
@@ -56,6 +58,8 @@ Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
 Route::get('/product-category/{category_slug}',CategoryComponent::class)->name('product.categories');
 
 Route::get('/search',SearchComponent::class)->name('product.search');
+
+Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
