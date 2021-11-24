@@ -96,6 +96,9 @@
                                                 <li class="menu-item">
                                                     <a title="Products" href="{{ route('admin.products')}}" style="color:black">Products</a>
                                                 </li>
+                                                <li class="menu-item">
+                                                    <a title="Products" href="{{ route('admin.orders')}}" style="color:black">Orders</a>
+                                                </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                                                 </li>
