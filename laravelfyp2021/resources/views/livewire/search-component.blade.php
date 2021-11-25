@@ -70,7 +70,7 @@
             </div>
         </div>
         @else 
-        <p style="padding-top: 30px;">No Products</p>
+        <p style="padding-top: 30px;" class="alert alert-danger">No Products</p>
         @endif
     </div>
 </main>
