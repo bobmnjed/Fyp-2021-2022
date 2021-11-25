@@ -6,10 +6,44 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3>Ordered Items</h3>
+                                <h3>Order Details</h3>
                             </div>
                             <div class="col-md-6">
                                 <a href="{{route('admin.orders')}}" class="btn btn-success pull-right">All Orders</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" >
+                            <tr>
+                                <th>Order Id</th>
+                                <td>{{$order->id}}</td>
+                                <th>Order Date</th>
+                                <td>{{$order->created_at}}</td>
+                                <th>Status</th>
+                                <td style="color: black">{{$order->status}}</td>
+                                @if ($order->status =="delivered")
+                                <th>Delivery date</th>
+                                <td style="color: black">{{$order->delivered_date}}</td>
+                                @elseif($order->status =="canceled")
+                                <th>Cancellation date</th>
+                                <td style="color: black">{{$order->canceled_date}}</td>
+                                @endif
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Ordered Items</h3>
+                            </div>
+                            <div class="col-md-6">
                             </div>
                         </div>
                     </div>
