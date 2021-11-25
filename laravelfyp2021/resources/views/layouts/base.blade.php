@@ -113,6 +113,9 @@
                                     <ul class="submenu curency" >
                                         <li class="menu-item" >
                                             <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
+                                        </li>
+                                        <li class="menu-item" >
+                                            <a title="Dashboard" href="{{route('user.orders')}}" style="color:black">Orders</a>
                                         </li> 
                                         <li>
                                             <a style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
