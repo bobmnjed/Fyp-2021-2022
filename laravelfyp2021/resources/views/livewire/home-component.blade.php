@@ -129,10 +129,28 @@
                         <figure><img src="{{asset ('images/products')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
-                        <i><img src="{{asset ('images/star.png')}}"/></i>
-                        <i><img src="{{asset ('images/star.png')}}"/></i>
-                        <i><img src="{{asset ('images/star.png')}}"/></i>
-                        <i><img src="{{asset ('images/star.png')}}"/></i>
+                        <div class="product-rating">
+                            <style>
+                                .color-gray{
+                                    color: #e6e6e6 !important;
+                                }
+                            </style>
+                            @php
+                             $avgrating = 0;   
+                            @endphp
+                            @foreach ($product->orderItems->where('rstatus',1) as $orderItem)
+                                @php
+                                $avgrating = $avgrating + $orderItem->review->rating;
+                                @endphp
+                            @endforeach
+                            @for($i=1;$i<=5;$i++)
+                                @if($i<=$avgrating)
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                @else
+                                    <i class="fa fa-star color-gray" aria-hidden="true"></i>
+                                @endif
+                            @endfor
+                        </div>
                     </div>
                 </div>
                 @endforeach
