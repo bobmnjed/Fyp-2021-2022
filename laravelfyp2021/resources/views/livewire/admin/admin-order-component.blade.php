@@ -51,7 +51,7 @@
                                     <td>{{$order->email}}</td>
                                     <td>{{$order->zipcode}}</td>
                                     <td>{{$order->status}}</td>
-                                    <td style="color: black">{{$order->created_at}}</td>
+                                    <td style="color: black">{{$order->created_at->format('d F Y g:i A')}}</td>
                                     <td><a href="{{route('admin.orderdetails',['order_id'=>$order->id])}} " class="btn btn-info btn-sm">Details</td>
                                     <td>
                                         <div class="dropdown">

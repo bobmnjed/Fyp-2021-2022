@@ -47,7 +47,7 @@
                                     <td>{{$product->stock_status}}</td>
                                     <td>${{$product->regular_price}}</td>
                                     <td>{{$product->category->name}}</td>
-                                    <td>{{$product->created_at}}</td>
+                                    <td>{{$product->created_at->format('d F Y g:i A')}}</td>
                                     <td>
                                         <a href="{{route('admin.editproduct',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-7px"></i></a>
                                         <a href="#" wire:click.prevent="deleteProduct({{$product->id}})" style="margin-left: 10px;"><i class="fa fa-times fa-2px text-danger"></i></a> 
