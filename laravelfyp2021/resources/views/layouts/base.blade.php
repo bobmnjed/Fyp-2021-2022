@@ -65,12 +65,11 @@
                     <div class="topbar-menu right-menu">
                         <ul>
             
-                            <li class="menu-item" ><a title="ChatBot" href="#">Chatbot</a></li>
                              @if(Route::has('login'))
                                 @auth
                                   @if(Auth::user()->utype === 'ADM')
-                                        <li class="menu-item" ><a title="ChatBot" href="#">Sentiment Analysis</a></li>
-
+                                        <li class="menu-item" ><a title="sa" href="#">Sentiment Analysis</a></li>
+                                        <li class="menu-item" ><a title="Chat" href="{{route('admin.chat')}}">Chat Page</a></li>
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
@@ -95,6 +94,7 @@
                                             </ul>
                                         </li>
                                   @else 
+                                  <li class="menu-item" ><a title="Chat" href="{{route('user.chat')}}">Chat Page</a></li>
                                   <li class="menu-item menu-item-has-children parent" >
                                     <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="submenu curency" >
