@@ -5,6 +5,9 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use App\Models\Order;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\OrderDetailExport;
 
 class AdminOrderComponent extends Component
 {
@@ -23,6 +26,12 @@ class AdminOrderComponent extends Component
         $order->save();
         session()->flash('order_message','Order status has been updated successfully!');
     }   
+
+    public function export()
+    {
+          return Excel::download(new OrderDetailExport, 'users.xlsx');
+    }
+    
     public function render()
     {
         $orders = Order::orderBy('created_at','DESC')->paginate(12);

@@ -10,6 +10,7 @@
                             </div>
                             <div class="col-md-6">
                                 <a href="{{route('admin.orders')}}" class="btn btn-success pull-right">All Orders</a>
+                                <a href="#" class="btn btn-primary pull-right" style="margin-right: 4px" wire:click.prevent="exports">Export Reciept</a>
                             </div>
                         </div>
                     </div>

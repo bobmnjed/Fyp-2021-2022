@@ -12,7 +12,15 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3>All Orders</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>All Orders</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-primary pull-right" style="margin-right: 4px" wire:click.prevent="export">Export Reciept</a>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="panel-body">
                         @if (Session::has('order_message'))

@@ -4,6 +4,9 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Order;
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UserOrderExport;
 
 class AdminOrderDetailsComponent extends Component
 {
@@ -14,6 +17,12 @@ class AdminOrderDetailsComponent extends Component
     {
         $this->order_id = $order_id;
     }
+
+    public function exports()
+    {
+          return Excel::download(new UserOrderExport, 'orders.xlsx');
+    }
+
     public function render()
     {
         $order = Order::find($this->order_id);
