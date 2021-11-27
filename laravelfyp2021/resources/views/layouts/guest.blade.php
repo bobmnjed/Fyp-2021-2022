@@ -66,24 +66,11 @@
                         <ul>
             
                             <li class="menu-item" ><a title="ChatBot" href="#">Chatbot</a></li>
-
-                            <li class="menu-item menu-item-has-children parent" >
-                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="submenu curency" >
-                                    <li class="menu-item" >
-                                        <a title="Pound (GBP)" href="#" style="color:black">Pound (GBP)</a>
-                                    </li>
-                                    <li class="menu-item" >
-                                        <a title="Euro (EUR)" href="#"  style="color:black">Euro (EUR)</a>
-                                    </li>
-                                    <li class="menu-item" >
-                                        <a title="Dollar (USD)" href="#"  style="color:black">Dollar (USD)</a>
-                                    </li>
-                                </ul>
-                            </li>
                              @if(Route::has('login'))
                                 @auth
                                   @if(Auth::user()->utype === 'ADM')
+                                        <li class="menu-item" ><a title="ChatBot" href="#">Sentiment Analysis</a></li>
+
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
@@ -113,6 +100,9 @@
                                     <ul class="submenu curency" >
                                         <li class="menu-item" >
                                             <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
+                                        </li>
+                                        <li class="menu-item" >
+                                            <a title="Dashboard" href="{{route('user.orders')}}" style="color:black">Orders</a>
                                         </li> 
                                         <li>
                                             <a style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
@@ -128,7 +118,22 @@
                                  <li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
                                 @endif
                             @endif   
+                            <li class="menu-item menu-item-has-children parent" >
+                                <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="submenu curency" >
+                                    <li class="menu-item" >
+                                        <a title="Pound (GBP)" href="#" style="color:black">Pound (GBP)</a>
+                                    </li>
+                                    <li class="menu-item" >
+                                        <a title="Euro (EUR)" href="#"  style="color:black">Euro (EUR)</a>
+                                    </li>
+                                    <li class="menu-item" >
+                                        <a title="Dollar (USD)" href="#"  style="color:black">Dollar (USD)</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
+                        
                     </div>
                 </div>
             </div>

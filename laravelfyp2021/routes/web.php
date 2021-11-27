@@ -32,6 +32,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\DetailsComponent;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,6 +71,8 @@ Route::get('/product-category/{category_slug}',CategoryComponent::class)->name('
 Route::get('/search',SearchComponent::class)->name('product.search');
 
 Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');
+
+// Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');

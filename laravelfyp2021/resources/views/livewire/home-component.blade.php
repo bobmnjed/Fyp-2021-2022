@@ -134,6 +134,9 @@
                                 .color-gray{
                                     color: #e6e6e6 !important;
                                 }
+                                .fa-star{
+                                    color: yellow;
+                                }
                             </style>
                             @php
                              $avgrating = 0;   
