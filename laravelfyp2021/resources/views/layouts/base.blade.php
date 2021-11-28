@@ -85,6 +85,9 @@
                                                 <li class="menu-item">
                                                     <a title="All orders" href="{{ route('admin.orders')}}" style="color:black">All Orders</a>
                                                 </li>
+                                                <li class="menu-item">
+                                                    <a title="messages" href="{{ route('admin.contact')}}" style="color:black">Contact Messages</a>
+                                                </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                                                 </li>
@@ -102,7 +105,10 @@
                                             <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
                                         </li>
                                         <li class="menu-item" >
-                                            <a title="Dashboard" href="{{route('user.orders')}}" style="color:black">Orders</a>
+                                            <a title="orders" href="{{route('user.orders')}}" style="color:black">My Orders</a>
+                                        </li>
+                                        <li class="menu-item" >
+                                            <a title="change_password" href="{{route('user.changepassword')}}" style="color:black">Change Password</a>
                                         </li> 
                                         <li>
                                             <a style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>

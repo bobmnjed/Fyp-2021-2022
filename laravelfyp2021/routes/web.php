@@ -6,37 +6,31 @@ use App\Http\Livewire\ContactusComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\PhonebrandsComponent;
 use App\Http\Livewire\ThankyouComponent;
+use App\Http\Livewire\CartComponent;
+use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\DetailsComponent;
 
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserOrdersComponent;
 use App\Http\Livewire\User\UserOrderDetailsComponent;
 use App\Http\Livewire\User\UserReviewComponent;
 use App\Http\Livewire\User\UserChatComponent;
-
-
+use App\Http\Livewire\User\UserChangePasswordComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
-
 use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminChatComponent;
-
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
-
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
-
-
-use App\Http\Livewire\CartComponent;
-use App\Http\Livewire\CategoryComponent;
-use App\Http\Livewire\SearchComponent;
-use App\Http\Livewire\DetailsComponent;
+use App\Http\Livewire\Admin\AdminContactComponent;
 
 use App\Models\Message;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,7 +54,7 @@ Route::get('/shop',ShopComponent::class);
 
 Route::get('/Aboutus',AboutusComponent::class);
 
-Route::get('/Contactus',ContactusComponent::class);
+Route::get('/Contactus',ContactusComponent::class)->name('contact');
 
 Route::get('/Phonebrands',PhonebrandsComponent::class);
 
@@ -91,16 +85,16 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
         Route::get('/user/review/{order_item_id}',UserReviewComponent::class)->name('user.review');
         Route::get('/user/chat',UserChatComponent::class)->name('user.chat');
         Route::get('delete_chat', function () {
-                Message::truncate();
-                return redirect()->route('user.chat');
-            
-            })->name('delete_chat');
+                        Message::truncate();
+                        return redirect()->route('user.chat');
+               })->name('delete_chat');
+        Route::get('/user/change-password',UserChangePasswordComponent::class)->name('user.changepassword');
 }); 
         
 //For Admin
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
         
-      Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');  
+        Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');  
         Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
         Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.addcategory');
         Route::get('/admin/category/edit/{category_slug}',AdminEditCategoryComponent::class)->name('admin.editcategory');
@@ -111,10 +105,10 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
         Route::get('/admin/orders/{order_id}',AdminOrderDetailsComponent::class)->name('admin.orderdetails'); 
         Route::get('/admin/chat',AdminChatComponent::class)->name('admin.chat');
         Route::get('delete_chat', function () {
-                Message::truncate();
-                return redirect()->route('admin.chat');
-            
-            })->name('delete_chat');
+                        Message::truncate();
+                        return redirect()->route('admin.chat');
+                })->name('delete_chat');
+        Route::get('/admin/contactus',AdminContactComponent::class)->name('admin.contact');
 
 });
 

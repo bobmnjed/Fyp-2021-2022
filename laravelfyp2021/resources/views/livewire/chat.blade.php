@@ -155,10 +155,7 @@
                   </div>
                </div>
              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+             <div class="panel-body">
         <div class="messaging">
             <div class="inbox_msg">
                 <div class="mesgs">
@@ -211,4 +208,10 @@
         </div>
     </div>
 </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
