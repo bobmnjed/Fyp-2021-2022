@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use\Livewire\WithPagination;
 use\App\Models\Product;
+use\App\Models\Setting;
 use Cart;
 
 class HomeComponent extends Component
@@ -19,6 +20,7 @@ class HomeComponent extends Component
     public function render()
     {
         $products = Product::paginate(12);
-        return view('livewire.home-component',['products'=> $products])->layout('layouts.base');
+        $setting = Setting::find(1);
+        return view('livewire.home-component',['products'=> $products],['setting'=>$setting])->layout('layouts.base');
     }
 }
