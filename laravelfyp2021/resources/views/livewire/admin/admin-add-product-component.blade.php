@@ -105,6 +105,18 @@
                             </div>
 
                             <div class="form-group">
+                                <label class="col-md-4 control-label">Product Gallery</label>
+                                <div class="col-md-4">
+                                    <input type="file"  class="input-file" wire:model="images" multiple/>
+                                    @if ($images)
+                                        @foreach ($images as $image)
+                                            <img src = "{{ $image->temporaryUrl() }}" width = "120"/>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label class="col-md-4 control-label">Category</label>
                                 <div class="col-md-4">
                                     <select style="height: 40px" class="form-control" wire:model="category_id">
