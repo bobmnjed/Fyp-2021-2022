@@ -60,9 +60,7 @@
 </x-guest-layout> --}}
 
 
-<x-guest-layout>
-</header>
-<!-- end header -->
+<x-base-layout>
     <main id="main" class="main-site left-sidebar">
 
 		<div class="container">
