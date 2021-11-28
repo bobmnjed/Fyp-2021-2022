@@ -29,6 +29,7 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminContactComponent;
+use App\Http\Livewire\Admin\AdminSettingComponent;
 
 use App\Models\Message;
 use Illuminate\Support\Facades\Route;
@@ -109,6 +110,7 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
                         return redirect()->route('admin.chat');
                 })->name('delete_chat');
         Route::get('/admin/contactus',AdminContactComponent::class)->name('admin.contact');
+        Route::get('/admin/settings',AdminSettingComponent::class)->name('admin.settings');
 
 });
 

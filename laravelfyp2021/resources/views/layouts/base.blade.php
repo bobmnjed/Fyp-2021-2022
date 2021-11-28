@@ -86,7 +86,10 @@
                                                     <a title="All orders" href="{{ route('admin.orders')}}" style="color:black">All Orders</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a title="messages" href="{{ route('admin.contact')}}" style="color:black">Contact Messages</a>
+                                                    <a title="Contact Messages" href="{{ route('admin.contact')}}" style="color:black">Contact Messages</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="Settings" href="{{ route('admin.settings')}}" style="color:black">Settings</a>
                                                 </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
