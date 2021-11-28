@@ -50,8 +50,6 @@
 
 
 <x-guest-layout>
-</header>
-<!-- end header -->
 	<main id="main" class="main-site left-sidebar">
 
 		<div class="container">
