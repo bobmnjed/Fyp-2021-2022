@@ -65,12 +65,11 @@
                     <div class="topbar-menu right-menu">
                         <ul>
             
-                            <li class="menu-item" ><a title="ChatBot" href="#">Chatbot</a></li>
                              @if(Route::has('login'))
                                 @auth
                                   @if(Auth::user()->utype === 'ADM')
-                                        <li class="menu-item" ><a title="ChatBot" href="#">Sentiment Analysis</a></li>
-
+                                        <li class="menu-item" ><a title="sa" href="#">Sentiment Analysis</a></li>
+                                        <li class="menu-item" ><a title="Chat" href="{{route('admin.chat')}}">Chat Page</a></li>
                                         <li class="menu-item menu-item-has-children parent" >
                                             <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
@@ -86,6 +85,12 @@
                                                 <li class="menu-item">
                                                     <a title="All orders" href="{{ route('admin.orders')}}" style="color:black">All Orders</a>
                                                 </li>
+                                                <li class="menu-item">
+                                                    <a title="Contact Messages" href="{{ route('admin.contact')}}" style="color:black">Contact Messages</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a title="Settings" href="{{ route('admin.settings')}}" style="color:black">Settings</a>
+                                                </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
                                                 </li>
@@ -95,6 +100,7 @@
                                             </ul>
                                         </li>
                                   @else 
+                                  <li class="menu-item" ><a title="Chat" href="{{route('user.chat')}}">Chat Page</a></li>
                                   <li class="menu-item menu-item-has-children parent" >
                                     <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="submenu curency" >
@@ -102,7 +108,10 @@
                                             <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
                                         </li>
                                         <li class="menu-item" >
-                                            <a title="Dashboard" href="{{route('user.orders')}}" style="color:black">Orders</a>
+                                            <a title="orders" href="{{route('user.orders')}}" style="color:black">My Orders</a>
+                                        </li>
+                                        <li class="menu-item" >
+                                            <a title="change_password" href="{{route('user.changepassword')}}" style="color:black">Change Password</a>
                                         </li> 
                                         <li>
                                             <a style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
@@ -221,45 +230,7 @@
 {{$slot}}        
 
     <!-- footer -->
-    <footer>
-        <div id="contact" class="footer">
-            <div class="container">
-                <div class="row pdn-top-30">
-                    <div class="col-md-12 ">
-                        <div class="footer-box">
-                            <div class="headinga">
-                                <h3>Address</h3>
-                                <span>Aramoun Mian Road, Infront of Jawhari Station, PhoneMate 1st Floor</span>
-                                <p>81/895453 -- 78/806084 -- 70/613904
-                                    <br>ibrahimmonajjed997@gmail.com</p>
-                            </div>
-                            <ul class="location_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-
-                            </ul>
-                            <div class="menu-bottom">
-                                <ul class="link">
-                                    <li> <a href="#">Home</a></li>
-                                    <li> <a href="#">About</a></li>
-                                    <li> <a href="#">Shop  </a></li>
-                                    <li> <a href="#"> Contact us</a></li>
-                                    <li><a href="#">Login</a></li>
-                                    <li><a href="#">Register</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <p>© 2021 All Rights Reserved. Designed By Rafik Hariri Seniors 2021</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @livewire('footer-component')
     <!-- end footer -->
     <!-- Javascript files-->
     <script src="{{ asset('js/jquery.min.js')}}"></script>
