@@ -21,7 +21,11 @@ class AdminProductComponent extends Component
             $images = explode(",",$product->images);
             foreach($images as $image)
             {
-                unlink('images/products'.'/'.$image);
+                if($image)
+                {
+                    unlink('images/products'.'/'.$image);
+                }
+                
             }
         }
 
