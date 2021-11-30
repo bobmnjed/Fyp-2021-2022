@@ -62,7 +62,7 @@
                     <span class="icon-stat-value">${{$totalRevenue}}</span>
                   </div>   
                   <div class="col-xs-4 text-center">
-                    <i class="fa fa-dollar icon-stat-visual bg-primary"></i>
+                    <i class="fa fa-dollar icon-stat-visual bg-danger"></i>
                   </div>
                 </div>    
                 <div class="icon-stat-footer">
@@ -78,7 +78,7 @@
                     <span class="icon-stat-value">{{$totalSales}}</span>
                   </div>    
                   <div class="col-xs-4 text-center">
-                    <i class="fa fa-gift icon-stat-visual bg-secondary"></i>
+                    <i class="fa fa-gift icon-stat-visual bg-primary"></i>
                   </div>
                 </div>    
                 <div class="icon-stat-footer">
@@ -94,7 +94,7 @@
                     <span class="icon-stat-value">${{$todayRevenue}}</span>
                   </div>    
                   <div class="col-xs-4 text-center">
-                    <i class="fa fa-dollar icon-stat-visual bg-primary"></i>
+                    <i class="fa fa-dollar icon-stat-visual bg-danger"></i>
                   </div>
                 </div>    
                 <div class="icon-stat-footer">
@@ -110,7 +110,7 @@
                     <span class="icon-stat-value">{{$todaySales}}</span>
                   </div>    
                   <div class="col-xs-4 text-center">
-                    <i class="fa fa-gift icon-stat-visual bg-secondary"></i>
+                    <i class="fa fa-gift icon-stat-visual bg-primary"></i>
                   </div>
                 </div>    
                 <div class="icon-stat-footer">
