@@ -48,6 +48,11 @@ class ShopComponent extends Component
 
         $categories = Category::all();
         
+        if(Auth::check())
+        {
+            Cart::store(Auth::user()->email);
+        }
+
         return view('livewire.shop-component',['products'=> $products, 'categories'=>$categories])->layout('layouts.base');
     }
 }
