@@ -8,6 +8,7 @@ use\App\Models\Product;
 use\App\Models\Category;
 use Cart;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class ShopComponent extends Component
 {
