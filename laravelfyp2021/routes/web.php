@@ -18,6 +18,8 @@ use App\Http\Livewire\User\UserReviewComponent;
 use App\Http\Livewire\User\UserChatComponent;
 use App\Http\Livewire\User\UserProfileComponent;
 use App\Http\Livewire\User\UserChangePasswordComponent;
+use App\Http\Livewire\User\UserEditProfileComponent;
+
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
@@ -92,6 +94,8 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
                })->name('delete_chat');
         Route::get('/user/change-password',UserChangePasswordComponent::class)->name('user.changepassword');
         Route::get('/user/profile',UserProfileComponent::class)->name('user.profile');
+        Route::get('/user/profile/edit',UserEditProfileComponent::class)->name('user.editprofile');
+
 }); 
         
 //For Admin

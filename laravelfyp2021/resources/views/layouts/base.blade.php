@@ -77,10 +77,10 @@
                                                     <a title="Dashboard" href="{{route('admin.dashboard')}}" style="color:black">Dashboard</a>
                                                 </li> 
                                                 <li class="menu-item">
-                                                    <a title="Categories" href="{{ route('admin.categories')}}" style="color:black">Categories</a>
+                                                    <a title="Categories" href="{{ route('admin.categories')}}" style="color:black">All Categories</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a title="Products" href="{{ route('admin.products')}}" style="color:black">Products</a>
+                                                    <a title="Products" href="{{ route('admin.products')}}" style="color:black">All Products</a>
                                                 </li>
                                                 <li class="menu-item">
                                                     <a title="All orders" href="{{ route('admin.orders')}}" style="color:black">All Orders</a>
@@ -89,7 +89,7 @@
                                                     <a title="Contact Messages" href="{{ route('admin.contact')}}" style="color:black">Contact Messages</a>
                                                 </li>
                                                 <li class="menu-item">
-                                                    <a title="Settings" href="{{ route('admin.settings')}}" style="color:black">Settings</a>
+                                                    <a title="Settings" href="{{ route('admin.settings')}}" style="color:black">Website Settings</a>
                                                 </li>
                                                 <li>
                                                     <a  style="color:black" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
@@ -105,10 +105,10 @@
                                     <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="submenu curency" >
                                         <li class="menu-item" >
-                                            <a title="Profile" href="{{route('user.profile')}}" style="color:black">Profile</a>
+                                            <a title="Profile" href="{{route('user.profile')}}" style="color:black">My Profile</a>
                                         </li>
                                         <li class="menu-item" >
-                                            <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">Dashboard</a>
+                                            <a title="Dashboard" href="{{route('user.dashboard')}}" style="color:black">My Dashboard</a>
                                         </li>
                                         <li class="menu-item" >
                                             <a title="orders" href="{{route('user.orders')}}" style="color:black">My Orders</a>
