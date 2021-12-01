@@ -74,7 +74,7 @@
                                             <a title="My Account" href="#">My Account {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
                                                 <li class="menu-item" >
-                                                    <a title="Dashboard" href="{{route('admin.dashboard')}}" style="color:black">Dashboard</a>
+                                                    <a title="Dashboard" href="{{route('admin.dashboard')}}" style="color:black">My Dashboard</a>
                                                 </li> 
                                                 <li class="menu-item">
                                                     <a title="Categories" href="{{ route('admin.categories')}}" style="color:black">All Categories</a>
