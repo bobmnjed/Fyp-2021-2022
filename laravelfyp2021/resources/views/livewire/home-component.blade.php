@@ -130,12 +130,12 @@
 <div class="row">
 
     @foreach ($products as $product )
-        
-    
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                     <div class="brand_box">
                         <a  href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
+
                         <figure><img src="{{asset ('images/products')}}/{{$product->image}}" alt="{{$product->name}}" /></figure></a>
+
                         <h3>$<strong class="red">{{$product->regular_price}}</strong></h3>
                         <span>{{$product->name}}</span>
                         <div class="product-rating">
@@ -166,7 +166,6 @@
                     </div>
                 </div>
                 @endforeach
-
 <div class="col-md-12">
     <a href="/shop" class="read-more">See More</a>
 </div>

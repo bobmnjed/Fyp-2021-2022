@@ -10,6 +10,10 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\DetailsComponent;
+use App\Http\Livewire\ThreeDComponent;
+
+use App\Http\Controllers\PdfController;
+
 
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\User\UserOrdersComponent;
@@ -34,6 +38,7 @@ use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminContactComponent;
 use App\Http\Livewire\Admin\AdminSettingComponent;
 use App\Http\Livewire\Admin\AdminSAComponent;
+
 
 use App\Models\Message;
 use Illuminate\Support\Facades\Route;
@@ -74,6 +79,10 @@ Route::get('/product-category/{category_slug}',CategoryComponent::class)->name('
 Route::get('/search',SearchComponent::class)->name('product.search');
 
 Route::get('/thank-you',ThankyouComponent::class)->name('thankyou');
+
+Route::get('/3d',ThreeDComponent::class)->name('3d');
+
+Route::get('generate-pdf', [PdfController::class, 'generatePDF']);
 
 
 // Route::match(['get', 'post'], '/botman', 'BotManController@handle');

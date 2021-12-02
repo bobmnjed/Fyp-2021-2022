@@ -241,6 +241,9 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.0.0.min.js')}}"></script>
     <script src="{{ asset('js/plugin.js')}}"></script>
+    <script src="{{asset ('js/three.min.js')}}"></script>
+    <script src="{{asset ('js/GLTFLoader.js')}}"></script>
+    <script src="{{asset ('js/OrbitControls.js')}}"></script>
 
     <script src="{{ asset('cartjs/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
 	<script src="{{ asset('cartjs/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
@@ -258,6 +261,7 @@
     <script src="{{ asset('js/owl.carousel.js')}}"></script>
     <script src="{{ asset('https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')}}"></script>
     <script src="{{ asset('https://kit.fontawesome.com/238f5de084.js" crossorigin="anonymous')}}"></script>
+    <script src="{{ asset('three.min.js')}}"></script>
     <script>
         $(document).ready(function() {
             $(".fancybox").fancybox({
